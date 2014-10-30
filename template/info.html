@@ -1,0 +1,14 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>Loop in template</title>
+        <link rel="stylesheet" type="text/css" href="{{ static_url('css/style.css')}}">
+    </head>
+    <body>
+    <h1>My Website is:</h1>
+    <p>{{web}}</p>
+    {% set email="<a href='mailto:qiwsir@gmail.com'>Connect to me</a>"%}
+    <p>{% raw email %}</p>
+    </body>
+</html>
+

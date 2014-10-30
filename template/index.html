@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>Loop in template</title>
+        <link rel="stylesheet" type="text/css" href="{{ static_url('css/style.css')}}">
+    </head>
+    <body>
+    <h1>aaaAAA</h1>
+    <p>There is a list, it is <b>{{info}}</b></p>
+    <p>I will print the elements of this list in order.</p>
+    {% for element in info %}
+        <p>{{element}}</p>
+    {% end %}
+    <br>
+    {% for index,element in enumerate(info) %}
+        <p>info[{{index}}] is {{element}}
+        {% if element == "python" %}
+            <p> <b>I love this language--{{element}}</b></p>
+        {% end %}
+    {% end %}
+
+    {% if "qiwsir@gmail.com" in info %}
+        <p><b>A Ha, this the python lesson of LaoQi, It is good! His email is {{info[2]}}</b></p>
+    {% end %}
+    <h2>Next, I set "python-tornado"(a string) to a variable(var)</h2>
+    {% set var="python-tornado" %}
+    <p>Would you like {{var}}?</p>
+    <form method="post" action="/option">
+        <p>WebSite:<input id="website" name="website" type="text"></p>
+        <p><input type="submit" value="ok,submit"></p>
+    </form>
+    </body>
+</html>
+
