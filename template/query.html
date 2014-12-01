@@ -6,8 +6,12 @@
     </head>
     <body>
     <h1>My Website is:</h1>
-    {% for every_line in result %}
-    <p>{{ every_line }}</p>
+    {% if result %}
+        {% for every_line in result %}
+            <p>{{ every_line }}</p>
+        {% end %}
+    {% else %}
+        <p>There is no data</p>
     {% end %}
     </body>
 </html>
