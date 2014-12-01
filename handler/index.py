@@ -9,6 +9,6 @@ sys.setdefaultencoding('utf-8')
 
 class IndexHandler(tornado.web.RequestHandler):
     def get(self):
-        lst = ["python","www.itdiffer.com","qiwsir@gmail.com"]
+        lst = "welcome you." 
         self.render("index.html", info=lst)
 

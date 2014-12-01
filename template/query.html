@@ -6,9 +6,9 @@
     </head>
     <body>
     <h1>My Website is:</h1>
-    <p>{{web}}</p>
-    {% set email="<a href='mailto:qiwsir@gmail.com'>Connect to me</a>"%}
-    <p>{% raw email %}</p>
+    {% for every_line in result %}
+    <p>{{ every_line }}</p>
+    {% end %}
     </body>
 </html>
 

@@ -1,0 +1,20 @@
+@font-face{
+    font-family:'Open Sans Condensed',Georgia, "Times New Roman",
+        "Microsoft YaHei", "微软雅黑",
+        STXihei, "华文细黑",
+        serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: italic;
+    font-weight: 300;
+}
+

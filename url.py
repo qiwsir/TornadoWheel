@@ -6,9 +6,10 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 from handler.index import IndexHandler
-from handler.optform import OptionForm
+from handler.query import QueryGene
+
 url=[
     (r'/', IndexHandler),
-    (r'/option', OptionForm),
+    (r'/query', QueryGene),
 
     ]
