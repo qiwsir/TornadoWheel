@@ -27,3 +27,10 @@ Tornado 是一个开发网站的Python框架，是一个非常好的框架，关
 ##提供者
 
 网站：[www.itdiffer.com](http://www.itdiffer.com)
+
+
+以表格形式展现搜索结果，并且每一页有一个连接，能够以json形式表现。
+
+将diff结果的压缩包大小
+实际工作小时数发给chunlei.
+每个月回报一下小时数

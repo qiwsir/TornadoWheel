@@ -2,18 +2,25 @@
 <html>
 <head>
     <title>Loop in template</title>
-    <link rel="stylesheet" type="text/css" href="{{ static_url('css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{static_url("css/style.css")}}"/>
+    <script src="{{static_url("js/jquery-1.10.2.js")}}"></script>
+    <script src="{{static_url("js/jquery-ui-1.10.4.custom.min.js")}}"></script>
 </head>
 <body>
-    <h1>{{info}}</h1>
-    <h1>Please search gene</h1>
+    <h1>Query Gene</h1>
+    <hr>
+    <br>
+    <div>
     <form method="post" action="/query">
-    <p><b>POS:</b>start:<input id="posstart" name="posstart" type="text">,end:<input id="posend" name="posend" type="text"></p>
-    <p><b>CHR:</b><input id="genechr" name="genechr" type="text"></p>
-    <p><b>VARTYPE:</b><input id="vartype" name="vartype" type="text"></p>
-    <p><b>REF:</b><input id="generef" name="generef" type="text"></p>
-    <p><input id="query" name="query" type="submit" value="query gene as my condition"></p>
+    <p><span class='word1'>POS:&nbsp;&nbsp;</span><input style="width:100px;" id="posstart" name="posstart" type="text">&nbsp;-&nbsp;<input style="width:100px;" id="posend" name="posend" type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class='word1'>CHR:&nbsp;&nbsp;</span><input style="width:50px;" id="genechr" name="genechr" type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class='word1'>VARTYPE:&nbsp;&nbsp;</span><input style="width:50px;" id="vartype" name="vartype" type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class='word1'>REF:&nbsp;&nbsp;</span><input style="width:50px;" id="generef" name="generef" type="text"></p>
+    <p><input class="button" id="search" name="search" type="submit" style="font-weight:bold;" value="SEARCH"></p>
+    <span class="error" id="error"></span></p>
     </form>
+    </div>
+<script src="{{static_url("js/search.js")}}"></script>
 </body>
 </html>
 

@@ -5,7 +5,38 @@
         <link rel="stylesheet" type="text/css" href="{{ static_url('css/style.css')}}">
     </head>
     <body>
-    <h1>My Website is:</h1>
+    <h1>Query Gene</h1>
+    <hr>
+    <br>
+    <div>
+    {% if result %}
+        <table width="960">
+        <tr>
+            <th>pos</th>
+            <th>chr</th>
+            <th>vartype</th>
+            <th>allele_freqs</th>
+            <th>ref</th>
+            <th>genotypes</th>
+            <th>genotype_freqs</th>
+        </tr>
+        {% for every_line in result %}
+            <tr>
+                <td>{{every_line['pos']}}</td>
+                <td>{{every_line['chr']}}</td>
+                <td>{{every_line['vartype']}}</td>
+                <td>{{every_line['allele_freqs']}}</td>
+                <td>{{every_line['ref']}}</td>
+                <td>{{every_line['genotypes']}}</td>
+                <td>{{every_line['genotype_freqs']}}</td>
+            </tr>
+        {% end %}
+        </table>
+    {% else %}
+        <p>There is no data</p>
+    {% end %}
+    </div>
+    <div>
     {% if result %}
         {% for every_line in result %}
             <p>{{ every_line }}</p>
@@ -13,6 +44,7 @@
     {% else %}
         <p>There is no data</p>
     {% end %}
+    </div>
     </body>
 </html>
 
